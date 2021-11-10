@@ -22,11 +22,15 @@ const Banner = () => {
               md={7}
             >
               <Box>
-                <Typography variant="h3">
+                <Typography variant="h3" sx={{ fontWeight: 500 }}>
                   We Provide{" "}
                   <Typography
                     variant="h3"
-                    sx={{ color: "orange", display: "inline-block" }}
+                    sx={{
+                      color: "orange",
+                      display: "inline-block",
+                      fontWeight: 500,
+                    }}
                   >
                     Premium Bikes
                   </Typography>{" "}
