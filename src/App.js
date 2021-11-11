@@ -5,6 +5,7 @@ import Login from "./Pages/Login/Login/Login";
 import ExploreProducts from "./Pages/Explore/ExploreProducts/ExploreProducts";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Register from "./Pages/Login/Register/Register";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
             </Route>
             <Route path="/explore">
               <ExploreProducts />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
             </Route>
             <Route path="/login">
               <Login />

@@ -19,6 +19,12 @@ const Navigation = () => {
             >
               <Button color="inherit">Explore</Button>
             </NavLink>
+            <NavLink
+              style={{ textDecoration: "none", color: "white" }}
+              to="/dashboard"
+            >
+              <Button color="inherit">Dashboard</Button>
+            </NavLink>
 
             <NavLink
               style={{ textDecoration: "none", color: "white" }}
