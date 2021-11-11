@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  AppBar,
-  Box,
-  Button,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 
 const Navigation = () => {
@@ -16,20 +8,18 @@ const Navigation = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link style={{ textDecoration: "none", color: "white" }} to="/">
                 MotoGP
               </Link>
             </Typography>
+            <NavLink
+              style={{ textDecoration: "none", color: "white" }}
+              to="/explore"
+            >
+              <Button color="inherit">Explore</Button>
+            </NavLink>
+
             <NavLink
               style={{ textDecoration: "none", color: "white" }}
               to="/login"

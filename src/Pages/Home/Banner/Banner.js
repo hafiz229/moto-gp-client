@@ -2,6 +2,7 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 
 import { Box } from "@mui/system";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const verticalCenter = {
   display: "flex",
@@ -45,12 +46,17 @@ const Banner = () => {
                   affordable prices. We promise to make you have the interesting
                   experiences.
                 </Typography>
-                <Button
-                  variant="contained"
-                  style={{ backgroundColor: "orange" }}
-                >
-                  Explore
-                </Button>
+
+                <NavLink to="/explore" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundColor: "orange",
+                    }}
+                  >
+                    Explore
+                  </Button>
+                </NavLink>
               </Box>
             </Grid>
             <Grid item xs={12} md={5} sx={{ my: 3 }}>
