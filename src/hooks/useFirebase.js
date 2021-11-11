@@ -122,7 +122,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  // Save New Registered User
+  // Save New Registered User (Working)
   const saveUser = (email, displayName, method) => {
     // use email, displayName directly as they matches firebase format
     const user = { email, displayName };

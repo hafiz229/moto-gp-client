@@ -17,7 +17,7 @@ const Products = () => {
     <Box sx={{ flexGrow: 1 }}>
       <Container>
         <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
-          Our Top Services
+          Our Top Products
         </Typography>
         <Grid
           container

@@ -1,8 +1,10 @@
 import React from "react";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navigation = () => {
+  const { user, logOut } = useAuth();
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -19,19 +21,26 @@ const Navigation = () => {
             >
               <Button color="inherit">Explore</Button>
             </NavLink>
-            <NavLink
-              style={{ textDecoration: "none", color: "white" }}
-              to="/dashboard"
-            >
-              <Button color="inherit">Dashboard</Button>
-            </NavLink>
-
-            <NavLink
-              style={{ textDecoration: "none", color: "white" }}
-              to="/login"
-            >
-              <Button color="inherit">Login</Button>
-            </NavLink>
+            {user?.email ? (
+              <Box>
+                <NavLink
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/dashboard"
+                >
+                  <Button color="inherit">Dashboard</Button>
+                </NavLink>
+                <Button onClick={logOut} color="inherit">
+                  Logout
+                </Button>
+              </Box>
+            ) : (
+              <NavLink
+                style={{ textDecoration: "none", color: "white" }}
+                to="/login"
+              >
+                <Button color="inherit">Login</Button>
+              </NavLink>
+            )}
           </Toolbar>
         </AppBar>
       </Box>

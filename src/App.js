@@ -6,6 +6,7 @@ import ExploreProducts from "./Pages/Explore/ExploreProducts/ExploreProducts";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Register from "./Pages/Login/Register/Register";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
             <Route path="/explore">
               <ExploreProducts />
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>

@@ -26,6 +26,8 @@ import ManageProducts from "../ManageProducts/ManageProducts";
 import MyOrders from "../MyOrders/MyOrders";
 import Pay from "../Pay/Pay";
 import Review from "../Review/Review";
+import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+import NormalRoute from "../../Login/NormalRoute/NormalRoute";
 
 const drawerWidth = 200;
 
@@ -58,34 +60,48 @@ function Dashboard(props) {
         </Link>
         <br />
         {/* admin routes */}
-        <Link to={`${url}/addProducts`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Add Products</Button>
-        </Link>
-        <br />
-        <Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Make Admin</Button>
-        </Link>
-        <br />
-        <Link to={`${url}/manageAllOrders`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Manage All Orders</Button>
-        </Link>
-        <br />
-        <Link to={`${url}/manageProducts`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Manage Products</Button>
-        </Link>
-        <br />
+        {admin && (
+          <Box>
+            <Link to={`${url}/addProducts`} style={{ textDecoration: "none" }}>
+              <Button color="inherit">Add Products</Button>
+            </Link>
+            <br />
+            <Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }}>
+              <Button color="inherit">Make Admin</Button>
+            </Link>
+            <br />
+            <Link
+              to={`${url}/manageAllOrders`}
+              style={{ textDecoration: "none" }}
+            >
+              <Button color="inherit">Manage All Orders</Button>
+            </Link>
+            <br />
+            <Link
+              to={`${url}/manageProducts`}
+              style={{ textDecoration: "none" }}
+            >
+              <Button color="inherit">Manage Products</Button>
+            </Link>
+            <br />
+          </Box>
+        )}
         {/* normal user routes */}
-        <Link to={`${url}/myOrders`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">My Orders</Button>
-        </Link>
-        <br />
-        <Link to={`${url}/pay`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">My Payments</Button>
-        </Link>
-        <br />
-        <Link to={`${url}/review`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Review</Button>
-        </Link>
+        {!admin && (
+          <Box>
+            <Link to={`${url}/myOrders`} style={{ textDecoration: "none" }}>
+              <Button color="inherit">My Orders</Button>
+            </Link>
+            <br />
+            <Link to={`${url}/pay`} style={{ textDecoration: "none" }}>
+              <Button color="inherit">My Payments</Button>
+            </Link>
+            <br />
+            <Link to={`${url}/review`} style={{ textDecoration: "none" }}>
+              <Button color="inherit">Review</Button>
+            </Link>
+          </Box>
+        )}
       </Box>
     </div>
   );
@@ -169,28 +185,28 @@ function Dashboard(props) {
             <DashboardHome></DashboardHome>
           </Route>
           {/* admin routes */}
-          <Route path={`${path}/addProducts`}>
+          <AdminRoute path={`${path}/addProducts`}>
             <AddProducts></AddProducts>
-          </Route>
-          <Route path={`${path}/makeAdmin`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
-          </Route>
-          <Route path={`${path}/manageAllOrders`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageAllOrders`}>
             <ManageAllOrders></ManageAllOrders>
-          </Route>
-          <Route path={`${path}/manageProducts`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageProducts`}>
             <ManageProducts></ManageProducts>
-          </Route>
+          </AdminRoute>
           {/* normal user routes */}
-          <Route path={`${path}/myOrders`}>
+          <NormalRoute path={`${path}/myOrders`}>
             <MyOrders></MyOrders>
-          </Route>
-          <Route path={`${path}/pay`}>
+          </NormalRoute>
+          <NormalRoute path={`${path}/pay`}>
             <Pay></Pay>
-          </Route>
-          <Route path={`${path}/review`}>
+          </NormalRoute>
+          <NormalRoute path={`${path}/review`}>
             <Review></Review>
-          </Route>
+          </NormalRoute>
         </Switch>
       </Box>
     </Box>
