@@ -8,9 +8,10 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ExploreProduct = ({ exploreProduct }) => {
-  const { name, description, img, price } = exploreProduct;
+  const { _id, name, description, img, price } = exploreProduct;
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card sx={{ maxWidth: "auto" }}>
@@ -38,13 +39,15 @@ const ExploreProduct = ({ exploreProduct }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button
-            variant="contained"
-            style={{ backgroundColor: "orange" }}
-            size="small"
-          >
-            Buy Now
-          </Button>
+          <Link to={`/booking/${_id}`} style={{ textDecoration: "none" }}>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "orange" }}
+              size="small"
+            >
+              Buy Now
+            </Button>
+          </Link>
         </CardActions>
       </Card>
     </Grid>

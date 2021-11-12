@@ -1,0 +1,12 @@
+.add-booking form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-booking form input,
+select {
+  width: 40%;
+  margin-bottom: 10px;
+}
