@@ -29,6 +29,7 @@ const Navigation = () => {
                 >
                   <Button color="inherit">Dashboard</Button>
                 </NavLink>
+                <Button color="inherit">{user.displayName}</Button>
                 <Button onClick={logOut} color="inherit">
                   Logout
                 </Button>
