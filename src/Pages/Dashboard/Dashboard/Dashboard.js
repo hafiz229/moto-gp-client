@@ -25,10 +25,10 @@ import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import MyOrders from "../MyOrders/MyOrders";
 import Pay from "../Pay/Pay";
-import Review from "../Review/Review";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import NormalRoute from "../../Login/NormalRoute/NormalRoute";
 import Home from "../../Home/Home/Home";
+import UserReview from "../UserReview/UserReview";
 
 const drawerWidth = 200;
 
@@ -106,8 +106,8 @@ function Dashboard(props) {
               <Button color="inherit">My Payments</Button>
             </Link>
             <br />
-            <Link to={`${url}/review`} style={{ textDecoration: "none" }}>
-              <Button color="inherit">Review</Button>
+            <Link to={`${url}/userReview`} style={{ textDecoration: "none" }}>
+              <Button color="inherit">User Review</Button>
             </Link>
           </Box>
         )}
@@ -216,8 +216,8 @@ function Dashboard(props) {
           <NormalRoute path={`${path}/pay`}>
             <Pay></Pay>
           </NormalRoute>
-          <NormalRoute path={`${path}/review`}>
-            <Review></Review>
+          <NormalRoute path={`${path}/userReview`}>
+            <UserReview></UserReview>
           </NormalRoute>
         </Switch>
       </Box>
