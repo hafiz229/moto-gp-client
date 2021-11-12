@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
 
   // get all orders
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://afternoon-waters-58275.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
     const order = { status };
     const sure = window.confirm("Are you sure, you want to continue?");
     if (sure === true) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://afternoon-waters-58275.herokuapp.com/orders/${id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -34,7 +34,7 @@ const ManageAllOrders = () => {
     // ask for a confirmation before delete an order
     const sure = window.confirm("Are you sure, you want to continue?");
     if (sure === true) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://afternoon-waters-58275.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

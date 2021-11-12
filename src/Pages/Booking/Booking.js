@@ -21,17 +21,19 @@ const Booking = () => {
   const [product, setProduct] = useState({});
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/orders", data).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Product Order Placed Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://afternoon-waters-58275.herokuapp.com/orders", data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Product Order Placed Successfully");
+          reset();
+        }
+      });
   };
   console.log(user);
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${productId}`)
+    fetch(`https://afternoon-waters-58275.herokuapp.com/products/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId]);

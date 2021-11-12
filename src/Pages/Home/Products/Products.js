@@ -9,7 +9,7 @@ const Products = () => {
   const size = 6;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products?size=${size}`)
+    fetch(`https://afternoon-waters-58275.herokuapp.com/products?size=${size}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

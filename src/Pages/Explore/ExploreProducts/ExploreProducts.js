@@ -7,7 +7,7 @@ const ExploreProducts = () => {
   const [exploreProducts, setExploreProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://afternoon-waters-58275.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setExploreProducts(data));
   }, []);

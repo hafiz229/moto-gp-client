@@ -7,12 +7,14 @@ import "./AddProducts.css";
 const AddProducts = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/products", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Product Inserted Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://afternoon-waters-58275.herokuapp.com/products", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Product Inserted Successfully");
+          reset();
+        }
+      });
   };
   return (
     <div className="add-product">

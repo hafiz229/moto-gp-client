@@ -8,13 +8,13 @@ const MakeAdmin = () => {
   const [success, setSuccess] = useState(false);
   // receive token from useAuth()
   const { token } = useAuth();
-  //   http://localhost:5000/
+  //   https://afternoon-waters-58275.herokuapp.com/
   const handleOnBlur = (e) => {
     setEmail(e.target.value);
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://afternoon-waters-58275.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,

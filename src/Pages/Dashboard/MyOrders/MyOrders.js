@@ -9,7 +9,7 @@ const MyOrders = () => {
 
   // get my orders
   useEffect(() => {
-    const url = `http://localhost:5000/orders?email=${user.email}`;
+    const url = `https://afternoon-waters-58275.herokuapp.com/orders?email=${user.email}`;
     fetch(url, {
       headers: {
         authorization: `Bearer ${token}`,
@@ -24,7 +24,7 @@ const MyOrders = () => {
     // ask for a confirmation before delete an order
     const sure = window.confirm("Are you sure, you want to continue?");
     if (sure === true) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://afternoon-waters-58275.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

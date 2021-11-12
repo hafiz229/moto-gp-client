@@ -7,12 +7,14 @@ import "./UserReview.css";
 const UserReview = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Review Inserted Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://afternoon-waters-58275.herokuapp.com/reviews", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Review Inserted Successfully");
+          reset();
+        }
+      });
   };
   return (
     <div className="add-review">
