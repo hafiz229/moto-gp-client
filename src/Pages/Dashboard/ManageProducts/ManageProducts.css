@@ -1,0 +1,17 @@
+.delete-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mouse-hover :hover {
+  background-color: red;
+  color: white;
+}
