@@ -28,6 +28,7 @@ import Pay from "../Pay/Pay";
 import Review from "../Review/Review";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import NormalRoute from "../../Login/NormalRoute/NormalRoute";
+import Home from "../../Home/Home/Home";
 
 const drawerWidth = 200;
 
@@ -39,7 +40,7 @@ function Dashboard(props) {
   let { path, url } = useRouteMatch();
 
   // receive admin from useAuth()
-  const { admin } = useAuth();
+  const { admin, logOut } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -50,13 +51,21 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       <Box sx={{ textAlign: "left", mx: 2 }}>
+        {/* home route */}
         <Link to="/home" style={{ textDecoration: "none" }}>
-          <Button color="inherit">Home</Button>
+          <Button color="inherit">Home Page</Button>
         </Link>
         <br />
-        {/* from nesting of react router (next 8 <Link>) */}
+        {/* logout button */}
+        <Link to="/home" style={{ textDecoration: "none" }}>
+          <Button onClick={logOut} color="inherit">
+            Logout
+          </Button>
+        </Link>
+        <br />
+        {/* common routes */}
         <Link to={`${url}`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Dashboard</Button>
+          <Button color="inherit">Dashboard Home</Button>
         </Link>
         <br />
         {/* admin routes */}
@@ -183,6 +192,9 @@ function Dashboard(props) {
         <Switch>
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
           </Route>
           {/* admin routes */}
           <AdminRoute path={`${path}/addProducts`}>
