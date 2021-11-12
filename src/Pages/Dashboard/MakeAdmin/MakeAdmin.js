@@ -36,13 +36,19 @@ const MakeAdmin = () => {
       <h2>Make a user Admin (Admin Only)</h2>
       <form onSubmit={handleAdminSubmit}>
         <TextField
-          sx={{ width: "50%" }}
+          sx={{ width: "40%" }}
           label="Email"
           type="email"
           onBlur={handleOnBlur}
           variant="standard"
         />
-        <Button type="submit" variant="contained">
+        <br />
+        <br />
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{ backgroundColor: "orange" }}
+        >
           Make Admin
         </Button>
         {success && <Alert severity="success">Made Admin successfully!</Alert>}
