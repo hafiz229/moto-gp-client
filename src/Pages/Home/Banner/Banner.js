@@ -25,7 +25,7 @@ const Banner = () => {
               <Box>
                 <Typography variant="h3" sx={{ fontWeight: 500 }}>
                   We Provide{" "}
-                  <Typography
+                  <Box
                     variant="h3"
                     sx={{
                       color: "orange",
@@ -34,7 +34,7 @@ const Banner = () => {
                     }}
                   >
                     Premium Bikes
-                  </Typography>{" "}
+                  </Box>{" "}
                   With High Quality
                 </Typography>
                 <Typography

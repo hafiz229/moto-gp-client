@@ -23,7 +23,7 @@ const Review = ({ review }) => {
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
-          <Rating name="disabled" value={rating} disabled />
+          <Rating name="disabled" value={parseInt(rating)} disabled />
         </CardContent>
       </Card>
     </Grid>
