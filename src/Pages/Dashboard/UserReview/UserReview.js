@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -15,7 +16,9 @@ const UserReview = () => {
   };
   return (
     <div className="add-review">
-      <h2>Normal User Review</h2>
+      <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
+        User Review
+      </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("name", { required: true })}

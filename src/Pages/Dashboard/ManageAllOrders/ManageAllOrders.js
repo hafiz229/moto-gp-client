@@ -60,7 +60,7 @@ const ManageAllOrders = () => {
             variant="h4"
             component="div"
           >
-            Manage All Orders (Admin Only)
+            Manage All Orders
           </Typography>
           <Grid
             container

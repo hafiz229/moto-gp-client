@@ -1,4 +1,4 @@
-import { Alert, Button, TextField } from "@mui/material";
+import { Alert, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 
@@ -33,7 +33,9 @@ const MakeAdmin = () => {
   };
   return (
     <div>
-      <h2>Make a user Admin (Admin Only)</h2>
+      <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
+        Make Admin
+      </Typography>
       <form onSubmit={handleAdminSubmit}>
         <TextField
           sx={{ width: "40%" }}

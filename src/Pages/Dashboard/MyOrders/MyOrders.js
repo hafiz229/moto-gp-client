@@ -48,7 +48,7 @@ const MyOrders = () => {
             variant="h4"
             component="div"
           >
-            My Orders (Normal User)
+            My Orders
           </Typography>
           <Grid
             container

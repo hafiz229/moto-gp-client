@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./ManageProducts.css";
 
@@ -33,7 +33,9 @@ const ManageProducts = () => {
   };
   return (
     <div className="mouse-hover">
-      <h2>Manage Products (Admin Only)</h2>
+      <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
+        Manage Products
+      </Typography>
       {products.map((product) => (
         <div key={product._id} className="delete-products">
           <h3 style={{ marginRight: "10px" }}>Product Name: {product.name}</h3>

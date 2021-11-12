@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -15,7 +16,9 @@ const AddProducts = () => {
   };
   return (
     <div className="add-product">
-      <h2>Add New Products (Admin Only)</h2>
+      <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
+        Add New Products
+      </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("name", { required: true, maxLength: 20 })}
