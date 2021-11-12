@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const ManageAllOrder = ({ allOrder, handleDelete }) => {
+const ManageAllOrder = ({ allOrder, handleDelete, handleApprove }) => {
   const { _id, name, email, order, price, address, phone, status } = allOrder;
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -55,6 +55,14 @@ const ManageAllOrder = ({ allOrder, handleDelete }) => {
             onClick={() => handleDelete(_id)}
           >
             Cancel Order
+          </Button>
+          <Button
+            variant="contained"
+            style={{ backgroundColor: "orange", marginBottom: "10px" }}
+            size="small"
+            onClick={() => handleApprove(_id, "approved")}
+          >
+            Approve Order
           </Button>
         </CardActions>
       </Card>

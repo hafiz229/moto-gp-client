@@ -12,6 +12,23 @@ const ManageAllOrders = () => {
       .then((data) => setAllOrders(data));
   }, []);
 
+  // update the status of an order
+  const handleApprove = (id, status) => {
+    const order = { status };
+    const sure = window.confirm("Are you sure, you want to continue?");
+    if (sure === true) {
+      fetch(`http://localhost:5000/orders/${id}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(order),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
+  };
+
   // delete an order
   const handleDelete = (id) => {
     // ask for a confirmation before delete an order
@@ -56,6 +73,7 @@ const ManageAllOrders = () => {
                 key={allOrder._id}
                 allOrder={allOrder}
                 handleDelete={handleDelete}
+                handleApprove={handleApprove}
               ></ManageAllOrder>
             ))}
           </Grid>
