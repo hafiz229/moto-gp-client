@@ -2,8 +2,8 @@ import React from "react";
 
 const Pay = () => {
   return (
-    <div>
-      <h2>Pay (Normal User)</h2>
+    <div style={{ textAlign: "center" }}>
+      <h2>Payment system coming soon.</h2>
     </div>
   );
 };
