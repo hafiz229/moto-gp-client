@@ -8,6 +8,7 @@ import Register from "./Pages/Login/Register/Register";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Booking from "./Pages/Booking/Booking";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>
