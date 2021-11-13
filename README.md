@@ -11,7 +11,7 @@ From motorcycle price in Bangladesh and Motorcycle Specification to the test rid
 
 https://motogp-229.firebaseapp.com/ 
 
-## Features and Functionalitys
+## Features and Functionality
 
 1. Home Page
 2. Explore Products
