@@ -48,7 +48,14 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <Box sx={{ textAlign: "left" }}>
-              <Typography variant="h5">MotoGP</Typography>
+              <Typography variant="h4">
+                MotoGP{" "}
+                <img
+                  style={{ width: "25px", height: "25px", borderRadius: "50%" }}
+                  alt=""
+                  src="https://i.ibb.co/1Q6vQ9R/37-372579-motogp-logo-background-1-hd-wallpapers-moto-gp.jpg"
+                />
+              </Typography>
               <Typography variant="small" style={{ color: "white" }}>
                 MotoGP #1 motorcycle selling website in Bangladesh where Bike
                 enthusiasts from all over the country can find all the top

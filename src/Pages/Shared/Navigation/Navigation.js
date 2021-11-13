@@ -10,8 +10,20 @@ const Navigation = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="fixed" sx={{ backgroundColor: "orange" }}>
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link style={{ textDecoration: "none", color: "white" }} to="/">
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontWeight: "bolder",
+                }}
+                to="/"
+              >
+                <img
+                  style={{ width: "28px", height: "28px", borderRadius: "50%" }}
+                  alt=""
+                  src="https://i.ibb.co/1Q6vQ9R/37-372579-motogp-logo-background-1-hd-wallpapers-moto-gp.jpg"
+                />{" "}
                 MotoGP
               </Link>
             </Typography>

@@ -53,44 +53,60 @@ function Dashboard(props) {
       <Box sx={{ textAlign: "left", mx: 2 }}>
         {/* home route */}
         <Link to="/home" style={{ textDecoration: "none" }}>
-          <Button color="inherit">Home Page</Button>
+          <Button color="warning" sx={{ fontWeight: "bolder" }}>
+            Home Page
+          </Button>
         </Link>
         <br />
         {/* logout button */}
         <Link to="/home" style={{ textDecoration: "none" }}>
-          <Button onClick={logOut} color="inherit">
+          <Button
+            onClick={logOut}
+            color="warning"
+            sx={{ fontWeight: "bolder" }}
+          >
             Logout
           </Button>
         </Link>
         <br />
         {/* common routes */}
         <Link to={`${url}`} style={{ textDecoration: "none" }}>
-          <Button color="inherit">Dashboard Home</Button>
+          <Button color="warning" sx={{ fontWeight: "bolder" }}>
+            Dashboard Home
+          </Button>
         </Link>
         <br />
         {/* admin routes */}
         {admin && (
           <Box>
             <Link to={`${url}/addProducts`} style={{ textDecoration: "none" }}>
-              <Button color="inherit">Add Products</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                Add Products
+              </Button>
             </Link>
             <br />
             <Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }}>
-              <Button color="inherit">Make Admin</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                Make Admin
+              </Button>
             </Link>
             <br />
             <Link
               to={`${url}/manageAllOrders`}
               style={{ textDecoration: "none" }}
             >
-              <Button color="inherit">Manage All Orders</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                Manage All Orders
+              </Button>
             </Link>
             <br />
             <Link
               to={`${url}/manageProducts`}
               style={{ textDecoration: "none" }}
             >
-              <Button color="inherit">Manage Products</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                Manage Products
+              </Button>
             </Link>
             <br />
           </Box>
@@ -99,15 +115,21 @@ function Dashboard(props) {
         {!admin && (
           <Box>
             <Link to={`${url}/myOrders`} style={{ textDecoration: "none" }}>
-              <Button color="inherit">My Orders</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                My Orders
+              </Button>
             </Link>
             <br />
             <Link to={`${url}/pay`} style={{ textDecoration: "none" }}>
-              <Button color="inherit">My Payments</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                My Payments
+              </Button>
             </Link>
             <br />
             <Link to={`${url}/userReview`} style={{ textDecoration: "none" }}>
-              <Button color="inherit">User Review</Button>
+              <Button color="warning" sx={{ fontWeight: "bolder" }}>
+                User Review
+              </Button>
             </Link>
           </Box>
         )}
@@ -126,6 +148,7 @@ function Dashboard(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          backgroundColor: "orange",
         }}
       >
         <Toolbar>

@@ -37,24 +37,29 @@ const Register = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <Container>
+      <Container sx={{ marginTop: "2%" }}>
         <Grid container spacing={2}>
           <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-            <Typography variant="body1" gutterBottom>
+            <Typography
+              sx={{ fontWeight: 600, m: 2 }}
+              variant="h4"
+              component="div"
+              gutterBottom
+            >
               Register
             </Typography>
             {!isLoading && (
               <form onSubmit={handleLoginSubmit}>
                 <TextField
                   sx={{ width: "75%", m: 1 }}
-                  label="Your Name"
+                  label="Enter Name"
                   name="name"
                   onBlur={handleOnBlur}
                   variant="standard"
                 />
                 <TextField
                   sx={{ width: "75%", m: 1 }}
-                  label="Your Email"
+                  label="Enter Email"
                   name="email"
                   type="email"
                   onBlur={handleOnBlur}
@@ -62,7 +67,7 @@ const Register = () => {
                 />
                 <TextField
                   sx={{ width: "75%", m: 1 }}
-                  label="Your Password"
+                  label="Enter Password"
                   type="password"
                   name="password"
                   onBlur={handleOnBlur}
@@ -70,7 +75,7 @@ const Register = () => {
                 />
                 <TextField
                   sx={{ width: "75%", m: 1 }}
-                  label="ReType Your Password"
+                  label="Confirm Password"
                   type="password"
                   name="password2"
                   onBlur={handleOnBlur}
@@ -78,12 +83,13 @@ const Register = () => {
                 />
 
                 <Button
-                  sx={{ width: "75%", m: 1 }}
+                  sx={{ width: "25%", m: 1, backgroundColor: "orange" }}
                   type="submit"
                   variant="contained"
                 >
                   Register
                 </Button>
+                <br />
                 <NavLink style={{ textDecoration: "none" }} to="/login">
                   <Button variant="text">
                     Already Registered? Please Login

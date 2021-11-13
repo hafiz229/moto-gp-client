@@ -40,23 +40,28 @@ const Login = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <Container>
+      <Container sx={{ marginTop: "2%" }}>
         <Grid container spacing={2}>
           <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-            <Typography variant="body1" gutterBottom>
+            <Typography
+              sx={{ fontWeight: 600, m: 2 }}
+              variant="h4"
+              component="div"
+              gutterBottom
+            >
               Login
             </Typography>
             <form onSubmit={handleLoginSubmit}>
               <TextField
                 sx={{ width: "75%", m: 1 }}
-                label="Your Email"
+                label="Enter Email"
                 name="email"
                 onChange={handleOnChange}
                 variant="standard"
               />
               <TextField
                 sx={{ width: "75%", m: 1 }}
-                label="Your Password"
+                label="Enter Password"
                 type="password"
                 name="password"
                 onChange={handleOnChange}
@@ -64,12 +69,13 @@ const Login = () => {
               />
 
               <Button
-                sx={{ width: "75%", m: 1 }}
+                sx={{ width: "25%", m: 1, backgroundColor: "orange" }}
                 type="submit"
                 variant="contained"
               >
                 Login
               </Button>
+              <br />
               <NavLink style={{ textDecoration: "none" }} to="/register">
                 <Button variant="text">New User? Please Register</Button>
               </NavLink>
@@ -80,7 +86,11 @@ const Login = () => {
               {authError && <Alert severity="error">{authError}</Alert>}
             </form>
             <p>-----------------------------------</p>
-            <Button onClick={handleGoogleSignIn} variant="contained">
+            <Button
+              sx={{ backgroundColor: "orange" }}
+              onClick={handleGoogleSignIn}
+              variant="contained"
+            >
               Google Sign In
             </Button>
           </Grid>
