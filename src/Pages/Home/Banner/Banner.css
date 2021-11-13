@@ -1,0 +1,11 @@
+@media screen and (max-width: 480px) {
+  .responsive-banner {
+    margin-top: 25%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .responsive-banner {
+    margin-top: 5%;
+  }
+}

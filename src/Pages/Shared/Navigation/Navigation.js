@@ -8,7 +8,7 @@ const Navigation = () => {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="fixed" sx={{ backgroundColor: "orange" }}>
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link style={{ textDecoration: "none", color: "white" }} to="/">

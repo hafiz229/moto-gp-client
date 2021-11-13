@@ -3,6 +3,7 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./Banner.css";
 
 const verticalCenter = {
   display: "flex",
@@ -12,7 +13,7 @@ const verticalCenter = {
 
 const Banner = () => {
   return (
-    <div>
+    <div className="responsive-banner">
       <Container>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
@@ -59,7 +60,7 @@ const Banner = () => {
                 </NavLink>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5} sx={{ my: 3 }}>
+            <Grid item xs={12} md={5} sx={{ my: 3 }} className="banner-img">
               <img
                 style={{ verticalCenter, width: "500px" }}
                 src="https://i.ibb.co/x6dmmsv/262-2622065-yellow-bajaj-pulsar-150-rs.png"
