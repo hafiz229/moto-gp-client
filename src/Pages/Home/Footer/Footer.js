@@ -16,7 +16,7 @@ const Footer = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-
+            marginBottom: "10px",
             color: "rgba(255,255,255,.6)",
           }}
         >
@@ -44,12 +44,6 @@ const Footer = () => {
                 <Button color="inherit">Explore</Button>
               </NavLink>
               <br />
-              <NavLink
-                style={{ textDecoration: "none", color: "white" }}
-                to="/dashboard"
-              >
-                <Button color="inherit">Dashboard</Button>
-              </NavLink>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
