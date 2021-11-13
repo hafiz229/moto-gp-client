@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import "./News.css";
 
 const News = () => {
   return (
@@ -20,7 +21,7 @@ const News = () => {
         MotoGP Blogs{" "}
       </Typography>
       <Grid container spacing={2} sx={{ textAlign: "left" }}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} className="news-design">
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
@@ -49,7 +50,7 @@ const News = () => {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} className="news-design">
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
@@ -78,7 +79,7 @@ const News = () => {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} className="news-design">
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"

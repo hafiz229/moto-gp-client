@@ -1,12 +1,13 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import * as React from "react";
 import Rating from "@mui/material/Rating";
+import "./Review.css";
 
 const Review = ({ review }) => {
   const { name, profession, description, rating } = review;
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Card sx={{ maxWidth: "auto" }}>
+      <Card sx={{ maxWidth: "auto" }} className="review-design">
         <CardContent sx={{ height: "175px" }}>
           <Typography
             style={{ fontWeight: 500 }}

@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Product.css";
 
 const Product = ({ product }) => {
   const { _id, name, description, img, price } = product;
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} className="product-design">
       <Card sx={{ maxWidth: "auto" }}>
         <CardMedia
           component="img"
@@ -30,7 +31,11 @@ const Product = ({ product }) => {
           >
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            className="product-design"
+          >
             {description}
           </Typography>
           <br />
