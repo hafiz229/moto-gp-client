@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Grid, Typography, Box } from "@mui/material";
 import Navigation from "../../Shared/Navigation/Navigation";
 import ExploreProduct from "../ExploreProduct/ExploreProduct";
+import Footer from "../../Home/Footer/Footer";
 
 const ExploreProducts = () => {
   const [exploreProducts, setExploreProducts] = useState([]);
@@ -14,7 +15,7 @@ const ExploreProducts = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} style={{ marginBottom: "5%" }}>
         <Container>
           <Typography
             sx={{ fontWeight: 600, m: 2 }}
@@ -38,6 +39,7 @@ const ExploreProducts = () => {
           </Grid>
         </Container>
       </Box>
+      <Footer></Footer>
     </div>
   );
 };

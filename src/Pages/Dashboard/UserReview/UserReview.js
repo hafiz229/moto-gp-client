@@ -2,10 +2,12 @@ import { Typography } from "@mui/material";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth";
 import "./UserReview.css";
 
 const UserReview = () => {
   const { register, handleSubmit, reset } = useForm();
+  const { user } = useAuth();
   const onSubmit = (data) => {
     axios
       .post("https://afternoon-waters-58275.herokuapp.com/reviews", data)
@@ -23,6 +25,7 @@ const UserReview = () => {
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
+          defaultValue={user.displayName}
           {...register("name", { required: true })}
           placeholder="Enter your name"
         />

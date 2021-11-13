@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import "./ExploreProduct.css";
 
 const ExploreProduct = ({ exploreProduct }) => {
   const { _id, name, description, img, price } = exploreProduct;
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} className="explore-design">
       <Card sx={{ maxWidth: "auto" }}>
         <CardMedia
           component="img"

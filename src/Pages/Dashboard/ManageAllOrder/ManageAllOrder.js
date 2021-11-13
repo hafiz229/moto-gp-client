@@ -7,12 +7,13 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import "./ManageAllOrder.css";
 
 const ManageAllOrder = ({ allOrder, handleDelete, handleApprove }) => {
   const { _id, name, email, order, price, address, phone, status } = allOrder;
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Card sx={{ maxWidth: "auto" }}>
+      <Card sx={{ maxWidth: "auto" }} className="manage-order-design">
         <CardContent sx={{ height: "350px" }}>
           <Typography
             style={{ fontWeight: 500 }}
