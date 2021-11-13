@@ -11,23 +11,29 @@ const Reviews = () => {
       .then((data) => setReviews(data));
   }, []);
   return (
-    <Box sx={{ flexGrow: 1, mb: 5 }}>
-      <Container>
-        <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
-          Customer Reviews
-        </Typography>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ textAlign: "left" }}
-        >
-          {reviews.map((review) => (
-            <Review key={review._id} review={review}></Review>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
+    <div>
+      <Box sx={{ flexGrow: 1, mb: 5 }}>
+        <Container>
+          <Typography
+            sx={{ fontWeight: 600, m: 2 }}
+            variant="h4"
+            component="div"
+          >
+            Customer Reviews
+          </Typography>
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+            style={{ textAlign: "left" }}
+          >
+            {reviews.map((review) => (
+              <Review key={review._id} review={review}></Review>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+    </div>
   );
 };
 
