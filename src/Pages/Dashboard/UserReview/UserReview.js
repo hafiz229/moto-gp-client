@@ -43,6 +43,7 @@ const UserReview = () => {
           <option value="3">User Rating: 3</option>
           <option value="2">User Rating: 2</option>
           <option value="1">User Rating: 1</option>
+          <option value="0">User Rating: 0</option>
         </select>
         <input
           style={{
