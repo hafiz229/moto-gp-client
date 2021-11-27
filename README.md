@@ -13,8 +13,10 @@ https://motogp-229.firebaseapp.com/
 
 ## Features and Functionality
 
-1. Home Page
-2. Explore Products
-3. Login/Registration System
-4. Admin Dashboard (Manage All Orders, Add a Product, Make Admin, Manage Products)
-5. User Dashboard (My Orders, Pay, Review)
+1. Explore Products, Get Top Products
+2. User Login (My Orders, My Payments, Submit User Review, Place Order, Cancel Order)
+3. Admin Login (Add Products, Make Admin, Manage All Orders, Manage Products, Update Order Status)
+4. User and Admin Verifications using JWT Token, Login /Register with Email / Password, Google Sign In
+
+## Technologies
+Firebase, React.js, Node.js, Express.js, REST API, MongoDB, JWT Token, React Router, Material UI, JavaScript, HTML5, CSS3, Heroku
