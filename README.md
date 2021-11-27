@@ -19,4 +19,4 @@ https://motogp-229.firebaseapp.com/
 4. User and Admin Verifications using JWT Token, Login /Register with Email / Password, Google Sign In
 
 ## Technologies
-Firebase, React.js, Node.js, Express.js, REST API, MongoDB, JWT Token, React Router, Material UI, JavaScript, HTML5, CSS3, Heroku
+Firebase, React.js, Node.js, Express.js, REST API, MongoDB, JWT Token, React Router, Context API, Material UI, JavaScript, HTML5, CSS3, Heroku
