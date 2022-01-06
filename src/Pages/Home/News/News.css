@@ -1,4 +1,4 @@
 .news-design :hover {
-  background-color: royalblue;
-  color: white;
+  border-radius: 5px 20px 5px;
+  background: lime;
 }
