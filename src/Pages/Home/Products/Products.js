@@ -14,9 +14,9 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, backgroundColor: "#F5F6F7" }}>
       <Container>
-        <Typography sx={{ fontWeight: 600, m: 2 }} variant="h4" component="div">
+        <Typography sx={{ fontWeight: 600, p: 2 }} variant="h4" component="div">
           Our Top Products
         </Typography>
         <Grid
