@@ -88,18 +88,6 @@ const Navigation = () => {
               </NavLink>
             )}
             {user?.email ? (
-              // <Box>
-              //   <NavLink
-              //     style={{ textDecoration: "none", color: "white" }}
-              //     to="/dashboard"
-              //   >
-              //     <Button color="inherit">Dashboard</Button>
-              //   </NavLink>
-              //   <Button color="inherit">{user.displayName}</Button>
-              //   <Button onClick={logOut} color="inherit">
-              //     Logout
-              //   </Button>
-              // </Box>
               <Stack direction="row" spacing={2}>
                 <div>
                   <Button
@@ -187,10 +175,12 @@ const Navigation = () => {
               </Stack>
             ) : (
               <NavLink
-                style={{ textDecoration: "none", color: "white" }}
+                style={{ textDecoration: "none", color: "black" }}
                 to="/login"
               >
-                <Button color="inherit">Login</Button>
+                <Button color="inherit" style={{ fontWeight: "bolder" }}>
+                  Login
+                </Button>
               </NavLink>
             )}
           </Toolbar>
