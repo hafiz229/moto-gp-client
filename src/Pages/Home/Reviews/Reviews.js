@@ -11,8 +11,8 @@ const Reviews = () => {
       .then((data) => setReviews(data));
   }, []);
   return (
-    <div>
-      <Box sx={{ flexGrow: 1, mb: 5 }}>
+    <div style={{ backgroundColor: "#F5F6F7" }}>
+      <Box sx={{ flexGrow: 1, py: 5 }}>
         <Container>
           <Typography
             sx={{ fontWeight: 600, m: 2 }}
