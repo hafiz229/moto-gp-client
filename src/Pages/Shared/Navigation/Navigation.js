@@ -58,7 +58,7 @@ const Navigation = () => {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed" sx={{ backgroundColor: "orange" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "lime" }}>
           <Toolbar>
             <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
               <Link
@@ -74,14 +74,16 @@ const Navigation = () => {
                   alt=""
                   src="https://i.ibb.co/1Q6vQ9R/37-372579-motogp-logo-background-1-hd-wallpapers-moto-gp.jpg"
                 />{" "}
-                MotoGP
+                <span style={{ color: "black" }}>MotoGP</span>
               </Link>
             </Typography>
             <NavLink
-              style={{ textDecoration: "none", color: "white" }}
+              style={{ textDecoration: "none", color: "black" }}
               to="/explore"
             >
-              <Button color="inherit">Explore</Button>
+              <Button color="inherit" style={{ fontWeight: "bolder" }}>
+                Explore
+              </Button>
             </NavLink>
             {user?.email ? (
               // <Box>
@@ -105,9 +107,9 @@ const Navigation = () => {
                     aria-expanded={open ? "true" : undefined}
                     aria-haspopup="true"
                     onClick={handleToggle}
-                    sx={{ fontWeight: "bolder", color: "white" }}
+                    sx={{ fontWeight: "bolder", color: "black" }}
                   >
-                    {user.displayName}
+                    {user.displayName} ▼
                   </Button>
                   <Popper
                     open={open}
@@ -127,7 +129,7 @@ const Navigation = () => {
                               : "left bottom",
                         }}
                       >
-                        <Paper>
+                        <Paper style={{ backgroundColor: "lime" }}>
                           <ClickAwayListener onClickAway={handleClose}>
                             <MenuList
                               autoFocusItem={open}
