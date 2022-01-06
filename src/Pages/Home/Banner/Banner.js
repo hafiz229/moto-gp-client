@@ -7,7 +7,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "lime" }}>
       <Container
         sx={{
           display: { xs: "block", md: "flex" },
@@ -22,7 +22,7 @@ const Banner = () => {
             <Box
               variant="h3"
               sx={{
-                color: "orange",
+                color: "#083bef",
                 display: "inline-block",
                 fontWeight: 500,
               }}
@@ -33,7 +33,7 @@ const Banner = () => {
           </Typography>
           <Typography
             variant="h6"
-            sx={{ my: 3, fontSize: 16, fontWeight: 300, color: "gray" }}
+            sx={{ my: 3, fontSize: 16, fontWeight: 500, color: "black" }}
           >
             Our company was built by trust and reputation. We know how to make
             our customers love us by our high quality products with affordable
@@ -44,7 +44,9 @@ const Banner = () => {
             <Button
               variant="contained"
               style={{
-                backgroundColor: "orange",
+                backgroundColor: "#083bef",
+                color: "white",
+                fontWeight: "bolder",
               }}
             >
               Explore
