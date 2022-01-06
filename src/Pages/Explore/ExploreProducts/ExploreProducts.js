@@ -15,10 +15,13 @@ const ExploreProducts = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <Box sx={{ flexGrow: 1 }} style={{ marginBottom: "5%" }}>
+      <Box
+        sx={{ flexGrow: 1, backgroundColor: "#F5F6F7" }}
+        className="responsive-banner"
+      >
         <Container>
           <Typography
-            sx={{ fontWeight: 600, m: 2 }}
+            sx={{ fontWeight: 600, p: 2 }}
             variant="h4"
             component="div"
           >

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import "./ExploreProduct.css";
 
 const ExploreProduct = ({ exploreProduct }) => {
-  const { _id, name, description, img, price } = exploreProduct;
+  const { _id, name, img, price } = exploreProduct;
   return (
     <Grid item xs={12} sm={6} md={4} className="explore-design">
       <Card sx={{ maxWidth: "auto" }}>
@@ -22,7 +22,7 @@ const ExploreProduct = ({ exploreProduct }) => {
           image={img}
           alt="green iguana"
         />
-        <CardContent sx={{ height: "175px" }}>
+        <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography
             style={{ fontWeight: 500 }}
             gutterBottom
@@ -31,11 +31,11 @@ const ExploreProduct = ({ exploreProduct }) => {
           >
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-          <br />
-          <Typography variant="h6" color="text.primary">
+          <Typography
+            style={{ fontWeight: 500 }}
+            variant="h5"
+            color="text.primary"
+          >
             ${price}
           </Typography>
         </CardContent>
@@ -43,7 +43,7 @@ const ExploreProduct = ({ exploreProduct }) => {
           <Link to={`/booking/${_id}`} style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
-              style={{ backgroundColor: "orange" }}
+              style={{ backgroundColor: "#083bef" }}
               size="small"
             >
               Buy Now
