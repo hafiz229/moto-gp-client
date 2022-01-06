@@ -77,14 +77,16 @@ const Navigation = () => {
                 <span style={{ color: "black" }}>MotoGP</span>
               </Link>
             </Typography>
-            <NavLink
-              style={{ textDecoration: "none", color: "black" }}
-              to="/explore"
-            >
-              <Button color="inherit" style={{ fontWeight: "bolder" }}>
-                Explore
-              </Button>
-            </NavLink>
+            {!user?.email && (
+              <NavLink
+                style={{ textDecoration: "none", color: "black" }}
+                to="/explore"
+              >
+                <Button color="inherit" style={{ fontWeight: "bolder" }}>
+                  Explore
+                </Button>
+              </NavLink>
+            )}
             {user?.email ? (
               // <Box>
               //   <NavLink
@@ -107,7 +109,11 @@ const Navigation = () => {
                     aria-expanded={open ? "true" : undefined}
                     aria-haspopup="true"
                     onClick={handleToggle}
-                    sx={{ fontWeight: "bolder", color: "black" }}
+                    sx={{
+                      fontWeight: "bolder",
+                      color: "black",
+                      paddingY: "16%",
+                    }}
                   >
                     {user.displayName} ▼
                   </Button>
@@ -140,6 +146,21 @@ const Navigation = () => {
                               <NavLink
                                 style={{
                                   textDecoration: "none",
+                                  color: "black",
+                                }}
+                                to="/explore"
+                              >
+                                <MenuItem
+                                  color="inherit"
+                                  style={{ fontWeight: "bolder" }}
+                                >
+                                  Explore
+                                </MenuItem>
+                              </NavLink>
+                              <Divider />
+                              <NavLink
+                                style={{
+                                  textDecoration: "none",
                                 }}
                                 to="/dashboard"
                               >
@@ -152,7 +173,7 @@ const Navigation = () => {
                               <Divider />
                               <MenuItem
                                 onClick={logOut}
-                                sx={{ fontWeight: "bolder" }}
+                                sx={{ fontWeight: "bolder", color: "black" }}
                               >
                                 Logout
                               </MenuItem>
